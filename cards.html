@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #45a049;
+        }
+        .card:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- 12 Cards -->
+        <div class="card" onclick="navigateToWikipedia(1)">Card 1: JavaScript</div>
+        <div class="card" onclick="navigateToWikipedia(2)">Card 2: HTML</div>
+        <div class="card" onclick="navigateToWikipedia(3)">Card 3: CSS</div>
+        <div class="card" onclick="navigateToWikipedia(4)">Card 4: Python</div>
+        <div class="card" onclick="navigateToWikipedia(5)">Card 5: Java</div>
+        <div class="card" onclick="navigateToWikipedia(6)">Card 6: C</div>
+        <div class="card" onclick="navigateToWikipedia(7)">Card 7: C++</div>
+        <div class="card" onclick="navigateToWikipedia(8)">Card 8: React</div>
+        <div class="card" onclick="navigateToWikipedia(9)">Card 9: Node.js</div>
+        <div class="card" onclick="navigateToWikipedia(10)">Card 10: Ruby</div>
+        <div class="card" onclick="navigateToWikipedia(11)">Card 11: Swift</div>
+        <div class="card" onclick="navigateToWikipedia(12)">Card 12: Kotlin</div>
+    </div>
+
+    <script>
+        function navigateToWikipedia(cardNumber) {
+            let url = '';
+
+            switch(cardNumber) {
+                case 1:
+                    url = 'https://en.wikipedia.org/wiki/JavaScript';
+                    break;
+                case 2:
+                    url = 'https://en.wikipedia.org/wiki/HTML';
+                    break;
+                case 3:
+                    url = 'https://en.wikipedia.org/wiki/CSS';
+                    break;
+                case 4:
+                    url = 'https://en.wikipedia.org/wiki/Python_(programming_language)';
+                    break;
+                case 5:
+                    url = 'https://en.wikipedia.org/wiki/Java_(programming_language)';
+                    break;
+                case 6:
+                    url = 'https://en.wikipedia.org/wiki/C_(programming_language)';
+                    break;
+                case 7:
+                    url = 'https://en.wikipedia.org/wiki/C%2B%2B';
+                    break;
+                case 8:
+                    url = 'https://en.wikipedia.org/wiki/React_(JavaScript_library)';
+                    break;
+                case 9:
+                    url = 'https://en.wikipedia.org/wiki/Node.js';
+                    break;
+                case 10:
+                    url = 'https://en.wikipedia.org/wiki/Ruby_(programming_language)';
+                    break;
+                case 11:
+                    url = 'https://en.wikipedia.org/wiki/Swift_(programming_language)';
+                    break;
+                case 12:
+                    url = 'https://en.wikipedia.org/wiki/Kotlin_(programming_language)';
+                    break;
+                default:
+                    url = 'https://en.wikipedia.org';
+                    break;
+            }
+
+            // Open the Wikipedia page in a new tab
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
